@@ -1,11 +1,9 @@
 package com.project.back_end.models;
 
-public class Admin {
-
 @Entity 
-
-
- @Id
+public class Admin {
+ 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
