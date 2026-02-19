@@ -6,11 +6,16 @@
     <meta charset="UTF-8">
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo/logo.png" />
     <title>PatientDashboard</title>
+
+    <link rel="icon" href="../assets/favicon.ico" />
+    
     <link rel="stylesheet" href="../assets/css/adminDashboard.css">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/patientDashboard.css">
+    
     <script src="../js/render.js" defer></script>
     <script src="../js/util.js" defer></script>
+    
     <script src="../js/components/header.js" defer></script>
     <script src="../js/components/footer.js" defer></script>
     <script type="module" src="../js/components/modals.js"></script>
@@ -22,12 +27,23 @@
             <div id="header"></div>
             <main class="main-content">
                 <input type="text" id="searchBar" class="searchBar" placeholder="Search Bar for custom output" />
+
+                <div class="search-section">
+                  <input
+                    type="text"
+                    id="searchBar"
+                    class="searchBar"
+                    placeholder="Search Bar for custom output"
+                  />
+                </div>
+                
                 <div class="filter-wrapper">
                     <select class="filter-select" id="filterTime">
-                        <option value="">Sort by Time</option>
-                        <option value="AM">AM</option>
-                        <option value="PM">PM</option>
+                        <option value="">Filter by Time</option>
+                        <option value="AM">AM Availability</option>
+                        <option value="PM">PM Availability</option>
                     </select>
+                    
                     <select class="filter-select" id="filterSpecialty">
                         <option value="">Filter by Specialty</option>
                         <option value="Cardiologist">Cardiologist</option>
@@ -48,15 +64,18 @@
                 </div>
                 <div id="content"></div>
             </main>
+            
             <div id="footer"></div>
         </div>
     </div>
+    
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
             <div id="modal-body"></div>
         </div>
     </div>
+    
     <script type="module" src="../js/patientDashboard.js" defer></script>
 </body>
 
